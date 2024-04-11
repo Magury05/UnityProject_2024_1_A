@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ExRay : MonoBehaviour
 {
@@ -24,9 +25,17 @@ public class ExRay : MonoBehaviour
                 if (hit.collider.gameObject.tag == "Target")
                 {
                     Destroy(hit.collider.gameObject);
+                    Point += 1;
+                    if (Point >= 10) DoChangeScene();
                 }
             }
         }
 
     }
 }
+void DoChangeScene()
+{
+    SceneManager.LoadScene("ResultScene");
+}
+
+

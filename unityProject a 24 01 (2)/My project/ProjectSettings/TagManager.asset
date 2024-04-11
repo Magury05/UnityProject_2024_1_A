@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pipe
   - Items
+  - Target
   layers:
   - Default
   - TransparentFX
